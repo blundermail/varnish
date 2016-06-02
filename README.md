@@ -11,7 +11,7 @@ $ docker run \
 	-d \
 	-p 80:80 \
 	-e VARNISH_PORT=80 \
-	-e VARNISH_BACKEND_ADDRESS=127.0.0.1 \
+	-e VARNISH_BACKEND_HOST=127.0.0.1 \
 	-e VARNISH_BACKEND_PORT=8080 \
 	--name my-varnish \
 	varnish:latest

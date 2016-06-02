@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+mkdir -p /etc/varnish
 cat >/etc/varnish/default.vcl <<EOF
 vcl 4.0;
 
