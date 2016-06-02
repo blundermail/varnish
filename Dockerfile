@@ -36,11 +36,11 @@ RUN \
   make install && \
   rm ../varnish-$VARNISH_VERSION.tar.gz
 
-COPY start-varnishd.sh /usr/local/bin/start-varnishd
+COPY start-varnishd.bash /start-varnishd.bash
 
 ENV VARNISH_PORT 80
 ENV VARNISH_STORAGE_BACKEND malloc,100m
 ENV VARNISH_BACKEND_HOST 127.0.0.1
 ENV VARNISH_BACKEND_PORT 8080
 
-CMD ["/usr/local/bin/start-varnishd"]
+CMD ["/bin/bash", "/start-varnishd.bash"]
